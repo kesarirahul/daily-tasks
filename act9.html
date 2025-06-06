@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parent Selection</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $("#highlight").click(function(){
+        $("span").parent().css("background-color", "lightblue");
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <h2>Parent Traversal Example</h2>
+  <div>This is a <span>highlighted</span> word.</div>
+  <button id="highlight">Highlight Parent</button>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sibling Navigation</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $("#boldNext").click(function(){
+        $(".first").next().css("font-weight", "bold");
+      });
+    });
+  </script>
+</head>
+<body>
+  <p class="first">This is the first paragraph.</p>
+  <p>This is the second paragraph (next sibling).</p>
+  <button id="boldNext">Bold Next Sibling</button>
+
+</body>
+</html>

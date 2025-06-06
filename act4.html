@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Activity-4</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $("#Btn").click(function(){
+        $(".id1").css("background-color","red");
+        $(".id2").css("background-color","yellow");
+        $(".id3").css("background-color","green");
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  <div class ="id1">RED</div>
+  <div class ="id2">YELLOW</div>
+  <div class ="id3">GREEN</div>
+
+  <button id="Btn">Change Color</button>
+
+</body>
+
+</html>
