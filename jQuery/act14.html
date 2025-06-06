@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AJAX POST Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $("#submitForm").click(function(){
+        const userName = $("#name").val();
+
+        $.post("https://jsonplaceholder.typicode.com/posts", 
+        { name: userName }, 
+        function(response){
+          $("#postResult").html("Server received: " + JSON.stringify(response));
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <h2>Submit Your Name</h2>
+  <input type="text" id="name" placeholder="Enter your name">
+  <button id="submitForm">Submit</button>
+  <div id="postResult" style="margin-top: 10px;"></div>
+
+</body>
+</html>
